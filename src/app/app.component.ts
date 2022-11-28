@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
@@ -13,19 +13,19 @@ export class AppComponent {
   {
     return this.Isloggedin;
   }
-  
-  gradeBadge=2
-  hwBadge=1
-  testsBadge=3
-  planBadge=7
+  state="grades"
+  gradeBadge=null
+  hwBadge=null
+  testsBadge=null
+  planBadge=null
 
 }
 
 var drawerState="";
 var isLoggedIn=true;
-function changeDrawerState(state:number)
+function changeDrawerState(newstate:number)
 {
-  switch(state){
+  switch(newstate){
     case 1: drawerState = "grades";break;
     case 2: drawerState = "tests";break;
     case 3: drawerState = "homework";break;

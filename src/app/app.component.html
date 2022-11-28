@@ -17,14 +17,14 @@
 
         <mat-drawer [opened]="true" #drawer [mode]="'side'" >
           <mat-list role="list">
-            <mat-list-item><button [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
-            <mat-list-item><button [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
-            <mat-list-item><button [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
-            <mat-list-item><button [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
+            <mat-list-item><button (click)="state='grades'" [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
+            <mat-list-item><button (click)="state='homework'" [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
+            <mat-list-item><button (click)="state='tests'" [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
+            <mat-list-item><button (click)="state='plan'" [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
           </mat-list>
         </mat-drawer>
         <mat-drawer-content style="height:80vh">
-          <app-szuflada style="height:70vh"></app-szuflada>
+          <app-szuflada [uistate]="state" style="height:70vh"></app-szuflada>
         </mat-drawer-content>
 
       </mat-drawer-container>

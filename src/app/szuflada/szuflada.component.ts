@@ -8,10 +8,13 @@ import { Component, createNgModule, Input, OnInit } from '@angular/core';
 export class SzufladaComponent implements OnInit {
 
 
-  constructor() { }
+  constructor() {
+    this.uistate = "grades"
+  }
 
   ngOnInit(): void {
 
   }
+  @Input() uistate:String;
 
 }
