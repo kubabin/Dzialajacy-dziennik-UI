@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Działający dziennik</title>
+  </head>
+  <body>
+    <div *ngIf="isLoggedIn; else elseBlock">
+      <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
+          <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
+          <button mat-menu-item><mat-icon>settings</mat-icon>Ustawienia</button>
+        </mat-menu>
+      </mat-toolbar>
+      <mat-drawer-container class="sidenav-drawer" style="height:90vh">
+
+        <mat-drawer [opened]="true" #drawer [mode]="'side'" >
+          <mat-list role="list">
+            <mat-list-item><button [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
+            <mat-list-item><button [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
+            <mat-list-item><button [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
+            <mat-list-item><button [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
+          </mat-list>
+        </mat-drawer>
+        <mat-drawer-content style="height:80vh">
+          <app-szuflada style="height:70vh"></app-szuflada>
+        </mat-drawer-content>
+
+      </mat-drawer-container>
+    </div>
+    <ng-template #elseBlock>
+      <app-loginpage></app-loginpage>
+    </ng-template>
+  </body>
+</html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Działający dziennik</title>
+  </head>
+  <body>
+    <div *ngIf="">
+      <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
+          <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
+          <button mat-menu-item><mat-icon>settings</mat-icon>Ustawienia</button>
+        </mat-menu>
+      </mat-toolbar>
+      <mat-drawer-container class="sidenav-drawer" style="height:90vh">
+
+        <mat-drawer [opened]="true" #drawer [mode]="'side'" >
+          <mat-list role="list">
+            <mat-list-item><button mat-flat-button role="listitem">Oceny</button></mat-list-item>
+            <mat-list-item><button mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
+            <mat-list-item><button mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
+            <mat-list-item><button mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
+          </mat-list>
+        </mat-drawer>
+        <mat-drawer-content style="height:80vh">
+          <app-szuflada style="height:70vh"></app-szuflada>
+        </mat-drawer-content>
+
+      </mat-drawer-container>
+    </div>
+  </body>
+</html>
