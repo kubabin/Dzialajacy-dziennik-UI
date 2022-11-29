@@ -13,14 +13,22 @@ import {MatList, MatListModule} from '@angular/material/list'
 import {MatBadgeModule} from '@angular/material/badge';
 
 import { SzufladaComponent } from './szuflada/szuflada.component';
-import { LoginpageComponent } from './loginpage/loginpage.component'
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { GradesComponent } from './grades/grades.component';
+import { HomeworkComponent } from './homework/homework.component';
+import { TestsComponent } from './tests/tests.component';
+import { PlanComponent } from './plan/plan.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SzufladaComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    GradesComponent,
+    HomeworkComponent,
+    TestsComponent,
+    PlanComponent
   ],
   imports: [
     BrowserModule,
