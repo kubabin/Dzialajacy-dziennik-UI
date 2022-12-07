@@ -13,7 +13,7 @@ export class AppComponent {
   {
     return this.Isloggedin;
   }
-  state="grades"
+  drawerState="grades"
   drawerMode="student"
   gradeBadge=null
   hwBadge=null
