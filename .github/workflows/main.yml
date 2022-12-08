@@ -1,0 +1,29 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ gh-pages ]
+  pull_request:
+    branches: [ gh-pages ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: ng build
+      - run: sed -i 's+polyfills.js+Dzialajacy-dziennik-UI/polyfills.js+g'
+      - run: sed -i 's+runtime.js+Dzialajacy-dziennik-UI/runtime.js+g'
+      - run: sed -i 's+styles.css+Dzialajacy-dziennik-UI/styles.css+g'
+      - run: sed -i 's+main.js+/Dzialajacy-dziennik-UI/main.js+g'
