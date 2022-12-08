@@ -1,10 +1,11 @@
-name: Node.js CI
+name: compile
 
-on:
-  push:
-    branches: [ gh-pages ]
-  pull_request:
-    branches: [ gh-pages ]
+on: 
+  - workflow_dispatch
+  - pull_request
+      
+  
+  
 
 jobs:
   build:
