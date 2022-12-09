@@ -12,6 +12,7 @@ import {MatMenuModule} from '@angular/material/menu'
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatList, MatListModule} from '@angular/material/list'
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatDialogModule} from '@angular/material/dialog';
 
 // Builtin components
 import { SzufladaComponent } from './szuflada/szuflada.component';
@@ -22,6 +23,7 @@ import { TestsComponent } from './tests/tests.component';
 import { PlanComponent } from './plan/plan.component';
 import { StudentDrawerComponent } from './student-drawer/student-drawer.component';
 import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.component';
+
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.componen
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

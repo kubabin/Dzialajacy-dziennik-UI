@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
+import { Api } from './api';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,9 @@ import { MatDrawer } from '@angular/material/sidenav';
 })
 export class AppComponent {
   title = 'Dzialajacy-dziennik';
-  private Isloggedin = true;
   isLoggedIn()
   {
-    return this.Isloggedin;
+    return Api.isLoggedIn()
   }
   drawerState="grades"
   drawerMode="student"

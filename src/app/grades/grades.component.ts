@@ -14,7 +14,7 @@ export class GradesComponent implements OnInit {
     this.grades = ["6","6-","5+","5","5-","4+","4","4-","3+","3","3-","2+","2","2-","1+","1"]
   }
   testApi(){
-    this.api.connect()
+    this.api.login()
   }
   ngOnInit(): void {
   }
