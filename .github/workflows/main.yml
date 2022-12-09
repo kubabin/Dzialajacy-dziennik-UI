@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm install @angular/cli
+      - run: npm -g install @angular/cli
       - run: ng build
       - run: sed -i 's+polyfills.js+Dzialajacy-dziennik-UI/polyfills.js+g'
       - run: sed -i 's+runtime.js+Dzialajacy-dziennik-UI/runtime.js+g'
