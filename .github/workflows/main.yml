@@ -2,10 +2,6 @@ name: compile
 
 on: 
   - workflow_dispatch
-  - pull_request
-      
-  
-  
 
 jobs:
   build:
@@ -25,7 +21,7 @@ jobs:
       - run: npm install
       - run: npm -g install @angular/cli
       - run: ng build
-      - run: sed -i 's+polyfills.js+Dzialajacy-dziennik-UI/polyfills.js+g' index.html
-      - run: sed -i 's+runtime.js+Dzialajacy-dziennik-UI/runtime.js+g' index.html
-      - run: sed -i 's+styles.css+Dzialajacy-dziennik-UI/styles.css+g' index.html
-      - run: sed -i 's+main.js+/Dzialajacy-dziennik-UI/main.js+g' index.html
+      - run: sed -i 's+polyfills.js+Dzialajacy-dziennik-UI/polyfills.js+g' ./docs/index.html
+      - run: sed -i 's+runtime.js+Dzialajacy-dziennik-UI/runtime.js+g' ./docs/index.html
+      - run: sed -i 's+styles.css+Dzialajacy-dziennik-UI/styles.css+g' ./docs/index.html
+      - run: sed -i 's+main.js+/Dzialajacy-dziennik-UI/main.js+g' ./docsindex.html
