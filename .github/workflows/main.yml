@@ -21,4 +21,4 @@ jobs:
       - run: npm install
       - run: npm -g install @angular/cli
       - run: ng build
-      - run: sed -i 's+<base href="/">+<base href="/Dzialajacy-dziennik-UI/">+g' ./index.html
+      - run: sed -i 's+<base href="/">+<base href="/Dzialajacy-dziennik-UI/">+g' ./docs/index.html
