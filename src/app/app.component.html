@@ -6,7 +6,7 @@
   <body>
 
     <!--This is the little menu on top left corner.-->
-    <div *ngIf="isLoggedIn; else elseBlock">
+    <div *ngIf="false; else elseBlock">
       <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
         <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
         <mat-menu #menu="matMenu">
@@ -37,7 +37,13 @@
 
     <!--The user is not logged in.-->
     <ng-template #elseBlock>
-      <app-loginpage></app-loginpage>
+      <mat-toolbar color="primary">Działający dziennik<span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item disabled="true">Nie zalogowany</button>
+        </mat-menu>
+      </mat-toolbar>
+      <dialog-loginpage></dialog-loginpage>
     </ng-template>
   </body>
 </html>

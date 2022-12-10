@@ -1,3 +1,4 @@
+// Internals
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,9 +11,11 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon'
 import {MatMenuModule} from '@angular/material/menu'
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatList, MatListModule} from '@angular/material/list'
+import {MatListModule} from '@angular/material/list'
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field'
 
 // Builtin components
 import { SzufladaComponent } from './szuflada/szuflada.component';
@@ -50,7 +53,9 @@ import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.componen
     MatSidenavModule,
     MatListModule,
     MatBadgeModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
