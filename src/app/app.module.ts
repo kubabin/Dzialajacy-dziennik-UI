@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from'@angular/service-worker'
 
 // Material Design modules
 import {MatToolbarModule} from '@angular/material/toolbar'
@@ -26,6 +27,7 @@ import { TestsComponent } from './tests/tests.component';
 import { PlanComponent } from './plan/plan.component';
 import { StudentDrawerComponent } from './student-drawer/student-drawer.component';
 import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -43,7 +45,7 @@ import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.componen
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -55,7 +57,9 @@ import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.componen
     MatBadgeModule,
     MatDialogModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule,
+    ServiceWorkerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

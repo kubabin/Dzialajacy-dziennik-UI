@@ -1,0 +1,10 @@
+{
+  "lang": "pl",
+  "orientation":"portrait",
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/web-manifest.json",
+  "name": "Działający dziennik",
+  "short_name": "D-Dziennik",
+  "start_url": "/",
+  "theme_color": "#4CAF50",
+  "background_color": "#FAFAFA"
+}

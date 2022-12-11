@@ -4,7 +4,7 @@
     <title>Działający dziennik</title>
   </head>
   <body>
-
+    <router-outlet></router-outlet>
     <!--This is the little menu on top left corner.-->
     <div *ngIf="true; else elseBlock">
       <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>

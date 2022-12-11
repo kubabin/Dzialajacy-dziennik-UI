@@ -14,7 +14,10 @@ export class SzufladaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    if (this.mode=="teacher")
+    {
+      console.log("logged in as teacher")
+    }
   }
   @Input() mode:string;
   @Input() state:string;

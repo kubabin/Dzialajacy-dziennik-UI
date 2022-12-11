@@ -14,14 +14,17 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "baseHref": "/",
-            "outputPath": "docs/",
+            "outputPath": "dist/Dzialajacy-dziennik/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest",
+              "src/ngsw-worker.js",
+              "src/ngsw-config.js"
             ],
             "styles": [
               "src/custom-theme.scss",
@@ -96,6 +99,48 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/Dzialajacy-dziennik/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "app-shell": {
+          "builder": "@angular-devkit/build-angular:app-shell",
+          "options": {
+            "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Dzialajacy-dziennik:build:production",
+              "serverTarget": "Dzialajacy-dziennik:server:production"
+            },
+            "development": {
+              "browserTarget": "Dzialajacy-dziennik:build:development",
+              "serverTarget": "Dzialajacy-dziennik:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
