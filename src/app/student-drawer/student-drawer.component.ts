@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-student-drawer',
@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./student-drawer.component.css']
 })
 export class StudentDrawerComponent implements OnInit {
-  uistate:string;
-  constructor() {
-    this.uistate = "grades"
-  }
 
+  constructor() {
+    this.uistate="grades"
+  }
+  @Input() uistate:string;
   ngOnInit(): void {
   }
 

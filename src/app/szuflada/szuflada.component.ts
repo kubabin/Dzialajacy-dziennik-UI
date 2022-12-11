@@ -10,12 +10,12 @@ export class SzufladaComponent implements OnInit {
 
   constructor() {
     this.mode = "student";
-    this.state = "grades";
+    this.state = "gradesp";
   }
 
   ngOnInit(): void {
 
   }
-  @Input() mode:String;
-  @Input() state:String;
+  @Input() mode:string;
+  @Input() state:string;
 }

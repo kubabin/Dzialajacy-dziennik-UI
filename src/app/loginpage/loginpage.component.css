@@ -1,9 +1,11 @@
 .card
 {
 
-width: 400px;
+  margin:auto;
+  max-width: 400px;
 }
-
 .container
 {
+  text-align: center;
 }
+

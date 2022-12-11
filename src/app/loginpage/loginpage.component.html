@@ -2,14 +2,20 @@
 <html>
   <body>
     <br>
-    <mat-card class="mx-auto" style="margin: 0 auto; display: flex; align-items: center; max-width:500px">
-      <mat-card-title>Zaloguj się</mat-card-title>
-      <mat-card-content>
-        <form>
-          <mat-form-field><input type="email"/></mat-form-field>
-        </form>
-      </mat-card-content>
-    </mat-card>
+    <div class="container">
+      <mat-card class="card">
+        <mat-card-title>Zaloguj się</mat-card-title>
+        <mat-card-content>
+          <br>
+          <form>
+            <mat-form-field appearance="fill">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="pat@example.com" type="email"/>
+            </mat-form-field>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
 
   </body>
 </html>

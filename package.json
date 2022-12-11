@@ -20,6 +20,7 @@
     "@angular/material": "^13.0.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/pwa": "^0.5.3",
     "@angular/router": "^14.2.0",
     "dziennik-api": "^1.0.0",
     "rxjs": "~7.5.0",

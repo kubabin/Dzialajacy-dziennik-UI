@@ -2,7 +2,7 @@
 <html>
   <body>
     <div *ngIf="mode=='student'; else teacherMode">
-      <app-student-drawer></app-student-drawer>
+      <app-student-drawer [uistate]="state"></app-student-drawer>
     </div>
     <ng-template #teacherMode>
       <app-teacher-drawer></app-teacher-drawer>
