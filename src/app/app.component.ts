@@ -19,7 +19,6 @@ export class AppComponent {
   hwBadge=null
   testsBadge=null
   planBadge=null
-
 }
 
 var drawerState="";

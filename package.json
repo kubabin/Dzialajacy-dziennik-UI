@@ -21,7 +21,6 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/platform-server": "^14.2.0",
-    "@angular/pwa": "^15.0.3",
     "@angular/router": "^14.2.0",
     "@angular/service-worker": "^14.2.12",
     "dziennik-api": "^1.0.0",

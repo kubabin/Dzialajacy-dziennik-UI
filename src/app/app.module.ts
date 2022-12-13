@@ -1,6 +1,6 @@
 // Internals
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, isDevMode, enableProdMode } from '@angular/core';
+import { BrowserModule, enableDebugTools } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,8 +28,12 @@ import { PlanComponent } from './plan/plan.component';
 import { StudentDrawerComponent } from './student-drawer/student-drawer.component';
 import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.component';
 import { RouterModule } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
-
+if (environment.production)
+{
+  enableProdMode();
+}
 
 @NgModule({
   declarations: [
@@ -59,7 +63,13 @@ import { RouterModule } from '@angular/router';
     MatCardModule,
     MatFormFieldModule,
     RouterModule,
-    ServiceWorkerModule
+    ServiceWorkerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

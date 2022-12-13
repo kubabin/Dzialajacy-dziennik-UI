@@ -4,9 +4,9 @@
     <title>Działający dziennik</title>
   </head>
   <body>
-    <router-outlet></router-outlet>
+    <router-outlet>
     <!--This is the little menu on top left corner.-->
-    <div *ngIf="true; else elseBlock">
+    <div >
       <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
         <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
         <mat-menu #menu="matMenu">
@@ -45,6 +45,7 @@
       </mat-toolbar>
       <dialog-loginpage></dialog-loginpage>
     </ng-template>
+    </router-outlet>
   </body>
 </html>
 
