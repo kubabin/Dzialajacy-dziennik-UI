@@ -1,7 +1,10 @@
-name: compile
+name: build
 
-on: 
+on:
   - workflow_dispatch
+  - schedule:
+    - cron: '30 16 * * *'
+
 
 jobs:
   build:
