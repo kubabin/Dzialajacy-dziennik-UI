@@ -19,8 +19,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'
 
 // Builtin components
-import { SzufladaComponent } from './szuflada/szuflada.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { AttendanceComponent } from './attendance/attendance.component';
 import { GradesComponent } from './grades/grades.component';
 import { HomeworkComponent } from './homework/homework.component';
 import { TestsComponent } from './tests/tests.component';
@@ -38,7 +38,6 @@ if (environment.production)
 @NgModule({
   declarations: [
     AppComponent,
-    SzufladaComponent,
     LoginpageComponent,
     GradesComponent,
     HomeworkComponent,
@@ -46,7 +45,7 @@ if (environment.production)
     PlanComponent,
     StudentDrawerComponent,
     TeacherDrawerComponent,
-
+    AttendanceComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

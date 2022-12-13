@@ -17,5 +17,9 @@
       <h1>Plan lekcji</h1>
       <app-plan></app-plan>
     </div>
+    <div *ngIf="uistate=='attendance'">
+      <h1>Frekwencja</h1>
+      <app-attendance></app-attendance>
+    </div>
   </body>
 </html>

@@ -19,6 +19,7 @@ export class AppComponent {
   hwBadge=null
   testsBadge=null
   planBadge=null
+  attendanceBadge=null
 }
 
 var drawerState="";

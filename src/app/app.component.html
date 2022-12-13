@@ -22,14 +22,16 @@
 
         <mat-drawer [opened]="true" #drawer [mode]="'side'" >
           <mat-list role="list">
-            <mat-list-item><button (click)="drawerState='grades'" [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='homework'" [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='tests'" [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='plan'" [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='grades'"     [matBadge]="gradeBadge" mat-flat-button role="listitem"     >Oceny</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='homework'"   [matBadge]="hwBadge" mat-flat-button role="listitem"        >Zadania domowe</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='tests'"      [matBadge]="testsBadge" mat-flat-button role="listitem"     >Sprawdziany</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='plan'"       [matBadge]="planBadge" mat-flat-button role="listitem"      >Plan lekcji</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='attendance'" [matBadge]="attendanceBadge" mat-flat-button role="listitem">Frekwencja</button></mat-list-item>
           </mat-list>
         </mat-drawer>
         <mat-drawer-content style="height:80vh">
-          <app-szuflada [state]="drawerState" [mode]="drawerMode" style="height:70vh"></app-szuflada>
+          <ng-template *ngIf="drawerMode=='student' else teacherMode"><app-student-drawer></app-student-drawer></ng-template>
+          <ng-template #teacherMode><app-teacher-drawer></app-teacher-drawer></ng-template>
         </mat-drawer-content>
 
       </mat-drawer-container>
