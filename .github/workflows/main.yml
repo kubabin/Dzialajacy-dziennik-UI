@@ -2,8 +2,8 @@ name: build
 
 on:
   - workflow_dispatch
-  - schedule:
-    - cron: '30 16 * * *'
+  - push:
+    - paths: ["./docs/*.*"]
 
 
 jobs:
