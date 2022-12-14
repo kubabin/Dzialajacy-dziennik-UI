@@ -1,8 +1,11 @@
 name: build
 
-on:
-  - workflow_dispatch
-  - push
+on: 
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - "/docs/**"
+      - "/.github/workflows/**"
 
 
 jobs:
