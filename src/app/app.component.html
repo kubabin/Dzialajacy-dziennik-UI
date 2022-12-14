@@ -6,9 +6,9 @@
   <body>
     <router-outlet>
     <!--This is the little menu on top left corner.-->
-    <div >
-      <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
-        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+    <div *ngIf="isLoggedIn() else elseBlock">
+      <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()" aria-label="Menu"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
           <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
@@ -40,9 +40,9 @@
     <!--The user is not logged in.-->
     <ng-template #elseBlock>
       <mat-toolbar color="primary">Działający dziennik<span class="spacer"></span>
-        <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>person</mat-icon></button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item disabled="true">Nie zalogowany</button>
+          <button mat-menu-item disabled="true" aria-label="Menu użytkownika">Nie zalogowany</button>
         </mat-menu>
       </mat-toolbar>
       <dialog-loginpage></dialog-loginpage>

@@ -20,6 +20,7 @@ export class AppComponent {
   testsBadge=null
   planBadge=null
   attendanceBadge=null
+  
 }
 
 var drawerState="";
