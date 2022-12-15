@@ -11,7 +11,8 @@ export class AppComponent {
   title = 'Dzialajacy-dziennik';
   isLoggedIn()
   {
-    return Api.isLoggedIn()
+    return true
+    //return Api.isLoggedIn()
   }
   drawerState="grades"
   drawerMode="student"
@@ -20,7 +21,7 @@ export class AppComponent {
   testsBadge=null
   planBadge=null
   attendanceBadge=null
-  
+
 }
 
 var drawerState="";

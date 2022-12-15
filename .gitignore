@@ -2,3 +2,5 @@ node_modules
 .angular
 .vscode
 default.code-workspace
+
+.DS_Store

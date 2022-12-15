@@ -12,6 +12,10 @@ export class StudentDrawerComponent implements OnInit {
   }
   @Input() uistate:string;
   ngOnInit(): void {
+    if (this.uistate == null)
+    {
+      throw new Error("uistate is null")
+    }
   }
 
 }

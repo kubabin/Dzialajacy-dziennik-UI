@@ -5,7 +5,6 @@
   </head>
   <body>
     <router-outlet>
-    <!--This is the little menu on top left corner.-->
     <div *ngIf="isLoggedIn() else elseBlock">
       <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()" aria-label="Menu"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
@@ -22,15 +21,15 @@
 
         <mat-drawer [opened]="true" #drawer [mode]="'side'" >
           <mat-list role="list">
-            <mat-list-item><button (click)="drawerState='grades'"     [matBadge]="gradeBadge" mat-flat-button role="listitem"     >Oceny</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='homework'"   [matBadge]="hwBadge" mat-flat-button role="listitem"        >Zadania domowe</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='tests'"      [matBadge]="testsBadge" mat-flat-button role="listitem"     >Sprawdziany</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='plan'"       [matBadge]="planBadge" mat-flat-button role="listitem"      >Plan lekcji</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='grades'" [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='homework'" [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='tests'" [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
+            <mat-list-item><button (click)="drawerState='plan'" [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
             <mat-list-item><button (click)="drawerState='attendance'" [matBadge]="attendanceBadge" mat-flat-button role="listitem">Frekwencja</button></mat-list-item>
           </mat-list>
         </mat-drawer>
         <mat-drawer-content style="height:80vh">
-          <ng-template *ngIf="drawerMode=='student' else teacherMode"><app-student-drawer></app-student-drawer></ng-template>
+          <ng-template *ngIf="true else teacherMode"><app-student-drawer></app-student-drawer></ng-template>
           <ng-template #teacherMode><app-teacher-drawer></app-teacher-drawer></ng-template>
         </mat-drawer-content>
 
