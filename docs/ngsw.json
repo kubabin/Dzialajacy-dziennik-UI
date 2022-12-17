@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1671044086065,
+  "timestamp": 1671265843085,
   "index": "/Dzialajacy-dziennik-UI/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Dzialajacy-dziennik-UI/favicon.ico",
         "/Dzialajacy-dziennik-UI/index.html",
-        "/Dzialajacy-dziennik-UI/main.4f4324512ed28fb1.js",
+        "/Dzialajacy-dziennik-UI/main.3e4987826e463488.js",
         "/Dzialajacy-dziennik-UI/manifest.webmanifest",
         "/Dzialajacy-dziennik-UI/ngsw-config.js",
         "/Dzialajacy-dziennik-UI/ngsw-worker.js",
@@ -54,8 +54,8 @@
     "/Dzialajacy-dziennik-UI/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/Dzialajacy-dziennik-UI/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/Dzialajacy-dziennik-UI/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/Dzialajacy-dziennik-UI/index.html": "e19cfbf4e00e6afa97a501da2a1fb4e1e3d8b6f5",
-    "/Dzialajacy-dziennik-UI/main.4f4324512ed28fb1.js": "c0e90a3081986ca06a0f3fec818e61a0ceebd70d",
+    "/Dzialajacy-dziennik-UI/index.html": "f144c8ac30cb621f4ad85b52a2088c87d4528fa5",
+    "/Dzialajacy-dziennik-UI/main.3e4987826e463488.js": "4a78811472be9b5c52b3936dd28461cbf895437e",
     "/Dzialajacy-dziennik-UI/manifest.webmanifest": "c8ab1bf853a51bf36dfe819d08a93d93b351406a",
     "/Dzialajacy-dziennik-UI/ngsw-config.js": "d920c5419f34b9185adf65d72a338993b2f6240a",
     "/Dzialajacy-dziennik-UI/ngsw-worker.js": "30eaca2ce1ab52ea140bc24e7b9ba25ee0884907",

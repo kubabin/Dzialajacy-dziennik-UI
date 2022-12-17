@@ -37,6 +37,7 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "docs",
               "budgets": [
                 {
                   "type": "initial",
@@ -56,6 +57,9 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "devProd":{
+              "outputPath": "docs/Dzialajacy-dziennik-UI/"
             },
             "development": {
               "buildOptimizer": false,
