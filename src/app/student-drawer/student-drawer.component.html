@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <ng-template *ngIf="uistate=='grades'">
+    <div *ngIf="uistate=='grades'">
       <h1>Oceny</h1>
       <app-grades></app-grades>
-    </ng-template>>
-    <ng-template *ngIf="uistate=='homework'">
+    </div>
+    <div *ngIf="uistate=='homework'">
       <h1>Zadania domowe</h1>
       <app-homework></app-homework>
-    </ng-template>>
-    <ng-template *ngIf="uistate=='tests'">
+    </div>
+    <div *ngIf="uistate=='tests'">
       <h1>Sprawdziany</h1>
       <app-tests></app-tests>
-    </ng-template>
-    <ng-template *ngIf="uistate=='plan'">
+    </div>
+    <div *ngIf="uistate=='plan'">
       <h1>Plan lekcji</h1>
       <app-plan></app-plan>
-    </ng-template>
-    <ng-template *ngIf="uistate=='attendance'">
+    </div>
+    <div *ngIf="uistate=='attendance'">
       <h1>Frekwencja</h1>
       <app-attendance></app-attendance>
-    </ng-template>
+    </div>
   </body>
 </html>

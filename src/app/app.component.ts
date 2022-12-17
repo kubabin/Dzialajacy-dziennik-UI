@@ -23,14 +23,3 @@ export class AppComponent {
   attendanceBadge=null
 
 }
-
-var drawerState="";
-var isLoggedIn=true;
-function changeDrawerState(newstate:number)
-{
-  switch(newstate){
-    case 1: drawerState = "grades";break;
-    case 2: drawerState = "tests";break;
-    case 3: drawerState = "homework";break;
-  }
-}

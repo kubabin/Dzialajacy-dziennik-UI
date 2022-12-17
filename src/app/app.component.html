@@ -29,8 +29,7 @@
           </mat-list>
         </mat-drawer>
         <mat-drawer-content style="height:80vh">
-          <ng-template *ngIf="true else teacherMode"><app-student-drawer></app-student-drawer></ng-template>
-          <ng-template #teacherMode><app-teacher-drawer></app-teacher-drawer></ng-template>
+          <app-student-drawer [uistate]="drawerState"></app-student-drawer>
         </mat-drawer-content>
 
       </mat-drawer-container>

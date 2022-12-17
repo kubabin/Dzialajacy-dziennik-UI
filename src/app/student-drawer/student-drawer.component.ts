@@ -10,7 +10,7 @@ export class StudentDrawerComponent implements OnInit {
   constructor() {
     this.uistate="grades"
   }
-  @Input() uistate:string;
+  @Input('uistate') uistate:string;
   ngOnInit(): void {
     if (this.uistate == null)
     {
