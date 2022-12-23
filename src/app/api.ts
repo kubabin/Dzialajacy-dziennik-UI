@@ -24,4 +24,8 @@ export class Api {
   {
     return Cookies.exists("sessionCode")
   }
+  getGrades()
+  {
+    return []
+  }
 }
