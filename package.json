@@ -1,10 +1,10 @@
 {
   "name": "dzialajacy-dziennik",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "mobile": "ng serve --disable-host-check --host=192.168.8.112",
+    "mobile_device_test": "ng serve --disable-host-check --host=127.0.0.1",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
