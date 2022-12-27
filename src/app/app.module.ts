@@ -17,6 +17,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatTabsModule} from '@angular/material/tabs'
 
 // Builtin components
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -61,6 +62,7 @@ if (environment.production)
     MatDialogModule,
     MatCardModule,
     MatFormFieldModule,
+    MatTabsModule,
     RouterModule,
     ServiceWorkerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

@@ -1,1 +1,30 @@
+<mat-tab-group class="tabs">
+  <mat-tab label="Lista ocen">
+    <mat-list class="subjectList">
+      <br><br>
+      <div *ngFor="let subject of subjects">
+        <mat-list-item>
+          <div>
+          <h2>{{subject.displayName}}</h2>
+          <mat-list class="gradeList">
+            <div *ngFor="let grade of shuffled()">
+              <mat-list-item>
+                <div *ngIf="grade.value.includes('-') || grade.value.includes('+'); else normalBadge">
+                  <div [ngStyle]="{'background-color':grade.color}" class="extendedBadge">{{grade.value}}</div>
+                </div>
+              <ng-template #normalBadge>
+                <div [ngStyle]="{'background-color':grade.color}" class="badge">{{grade.value}}</div>
+              </ng-template>
+            </mat-list-item>
 
+            </div>
+
+          </mat-list>
+        </div>
+      </mat-list-item>
+      <br><br><hr><br><br>
+      </div>
+    </mat-list>
+
+  </mat-tab>
+</mat-tab-group>

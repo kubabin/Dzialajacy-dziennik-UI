@@ -1,0 +1,33 @@
+.badge
+{
+  border-style: solid;
+  border-radius: 8px;
+  border-color:black;
+  width: 3mm;
+  height: 6mm;
+  text-align: center;
+}
+.extendedBadge
+{
+  border-style: solid;
+  border-radius: 8px;
+  border-color:black;
+  width: 5mm;
+  height: 6mm;
+  text-align: center;
+
+}
+.gradeList
+{
+  display: flex;
+}
+
+.tabs
+{
+  width: 100%;
+}
+h2
+{
+  margin-bottom:10px;
+  margin-top:10px;
+}
