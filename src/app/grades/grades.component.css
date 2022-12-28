@@ -1,18 +1,18 @@
 .badge
 {
   border-style: solid;
-  border-radius: 8px;
+  border-radius: 10px;
   border-color:black;
-  width: 3mm;
+  width: 5mm;
   height: 6mm;
   text-align: center;
 }
 .extendedBadge
 {
   border-style: solid;
-  border-radius: 8px;
+  border-radius: 10px;
   border-color:black;
-  width: 5mm;
+  width: 7mm;
   height: 6mm;
   text-align: center;
 

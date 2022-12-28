@@ -28,14 +28,14 @@ export class Api {
   }
   getGrades()
   {
-    return [new Grade("6", 3, 1, new Date(Date.now()), this.getSubjects()[1], "#1be350"),
-    new Grade("6-", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#1be350"),
-    new Grade("5+", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#25e31b"),
-    new Grade("5", 3, 1, new Date(Date.now()), this.getSubjects()[6], "#25e31b"),
-    new Grade("5-", 3, 1, new Date(Date.now()), this.getSubjects()[3], "#25e31b"),
-    new Grade("4+", 3, 1, new Date(Date.now()), this.getSubjects()[4],"#75e31b"),
-    new Grade("4", 3, 1, new Date(Date.now()), this.getSubjects()[6],"#75e31b"),
-    new Grade("4-", 3, 1, new Date(Date.now()), this.getSubjects()[4],"#75e31b"),
+    return [new Grade("6", 3, 1, new Date(Date.now()), this.getSubjects()[1], "#4ae31b"),
+    new Grade("6-", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#4ae31b"),
+    new Grade("5+", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#b1e31b"),
+    new Grade("5", 3, 1, new Date(Date.now()), this.getSubjects()[6], "#b1e31b"),
+    new Grade("5-", 3, 1, new Date(Date.now()), this.getSubjects()[3], "#b1e31b"),
+    new Grade("4+", 3, 1, new Date(Date.now()), this.getSubjects()[4],"#d9e31b"),
+    new Grade("4", 3, 1, new Date(Date.now()), this.getSubjects()[6],"#d9e31b"),
+    new Grade("4-", 3, 1, new Date(Date.now()), this.getSubjects()[4],"#d9e31b"),
     new Grade("3+", 3, 1, new Date(Date.now()), this.getSubjects()[1],"#e3dc1b"),
     new Grade("3", 3, 1, new Date(Date.now()), this.getSubjects()[4],"#e3dc1b"),
     new Grade("3-", 3, 1, new Date(Date.now()), this.getSubjects()[6],"#e3dc1b"),

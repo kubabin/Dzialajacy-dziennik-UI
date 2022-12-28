@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, ElementRef, NgModule, ViewChild } from '@angular/core';
 import { MatDrawer } from '@angular/material/sidenav';
 import { Api } from './api';
 
@@ -9,11 +9,7 @@ import { Api } from './api';
 })
 export class AppComponent {
   title = 'Dzialajacy-dziennik';
-  isLoggedIn()
-  {
-    return true
-    //return Api.isLoggedIn()
-  }
+  mainMode="app"
   drawerState="grades"
   drawerMode="student"
   gradeBadge=null
@@ -21,5 +17,9 @@ export class AppComponent {
   testsBadge=null
   planBadge=null
   attendanceBadge=null
+  isLoggedIn()
+  {
+    return false;
+  }
 
 }

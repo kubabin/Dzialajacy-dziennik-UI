@@ -7,7 +7,7 @@
           <div>
           <h2>{{subject.displayName}}</h2>
           <mat-list class="gradeList">
-            <div *ngFor="let grade of shuffled()">
+            <div *ngFor="let grade of grades">
               <mat-list-item>
                 <div *ngIf="grade.value.includes('-') || grade.value.includes('+'); else normalBadge">
                   <div [ngStyle]="{'background-color':grade.color}" class="extendedBadge">{{grade.value}}</div>
@@ -26,5 +26,8 @@
       </div>
     </mat-list>
 
+  </mat-tab>
+  <mat-tab label="Oceny szczegółowo">
+    
   </mat-tab>
 </mat-tab-group>

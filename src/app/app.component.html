@@ -4,47 +4,41 @@
     <title>Działający dziennik</title>
   </head>
   <body>
+
     <router-outlet>
-    <div *ngIf="isLoggedIn() else elseBlock">
-      <mat-toolbar color="primary"><button mat-icon-button (click)="drawer.toggle()" aria-label="Menu"><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
-          <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
-          <button mat-menu-item><mat-icon>settings</mat-icon>Ustawienia</button>
-        </mat-menu>
-      </mat-toolbar>
+
+      <div [ngSwitch]="mainMode">
+        <div *ngSwitchCase="'app'">
+          <mat-toolbar color="primary"><button mat-icon-button aria-label="Menu"(click)="drawer.toggle()" ><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
+            <mat-menu #menu="matMenu">
+              <div>
+                <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
+                <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
+                <button mat-menu-item><mat-icon>settings</mat-icon>Ustawienia</button>
+              </div>
+            </mat-menu>
+          </mat-toolbar>
+          <!--The drawer list at the left-->
+          <mat-drawer-container class="sidenav-drawer" style="height:90vh">
+            <mat-drawer [opened]="true" #drawer id="drawer" [mode]="'side'" >
+              <mat-list role="list">
+                <mat-list-item><button (click)="drawerState='grades'" [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
+                <mat-list-item><button (click)="drawerState='homework'" [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
+                <mat-list-item><button (click)="drawerState='tests'" [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
+                <mat-list-item><button (click)="drawerState='plan'" [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
+                <mat-list-item><button (click)="drawerState='attendance'" [matBadge]="attendanceBadge" mat-flat-button role="listitem">Frekwencja</button></mat-list-item>
+              </mat-list>
+            </mat-drawer>
+            <mat-drawer-content>
+              <app-student-drawer [uistate]="drawerState"></app-student-drawer>
+            </mat-drawer-content>
+          </mat-drawer-container>
+        </div>
 
 
-      <!--The drawer list at the left-->
-      <mat-drawer-container class="sidenav-drawer" style="height:90vh">
 
-        <mat-drawer [opened]="true" #drawer [mode]="'side'" >
-          <mat-list role="list">
-            <mat-list-item><button (click)="drawerState='grades'" [matBadge]="gradeBadge" mat-flat-button role="listitem">Oceny</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='homework'" [matBadge]="hwBadge" mat-flat-button role="listitem">Zadania domowe</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='tests'" [matBadge]="testsBadge" mat-flat-button role="listitem">Sprawdziany</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='plan'" [matBadge]="planBadge" mat-flat-button role="listitem">Plan lekcji</button></mat-list-item>
-            <mat-list-item><button (click)="drawerState='attendance'" [matBadge]="attendanceBadge" mat-flat-button role="listitem">Frekwencja</button></mat-list-item>
-          </mat-list>
-        </mat-drawer>
-        <mat-drawer-content style="height:80vh">
-          <app-student-drawer [uistate]="drawerState"></app-student-drawer>
-        </mat-drawer-content>
-
-      </mat-drawer-container>
-    </div>
-
-    <!--The user is not logged in.-->
-    <ng-template #elseBlock>
-      <mat-toolbar color="primary">Działający dziennik<span class="spacer"></span>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item disabled="true" aria-label="Menu użytkownika">Nie zalogowany</button>
-        </mat-menu>
-      </mat-toolbar>
-      <dialog-loginpage></dialog-loginpage>
-    </ng-template>
+      </div>
     </router-outlet>
   </body>
 </html>
