@@ -17,9 +17,12 @@ export class AppComponent {
   testsBadge=null
   planBadge=null
   attendanceBadge=null
+  modeBadge=6
+  settingsBadge=6
   isLoggedIn()
   {
     return false;
   }
+
 
 }

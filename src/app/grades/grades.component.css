@@ -22,11 +22,15 @@
   display: flex;
 }
 
-.tabs
+.gradeCard
 {
-  width: 100%;
+  width: 80px;
 }
-h2
+.gradesParent
+{
+  display: inline-flex;
+}
+.subjectName
 {
   margin-bottom:10px;
   margin-top:10px;

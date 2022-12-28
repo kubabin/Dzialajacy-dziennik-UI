@@ -28,7 +28,10 @@ export class Api {
   }
   getGrades()
   {
-    return [new Grade("6", 3, 1, new Date(Date.now()), this.getSubjects()[1], "#4ae31b"),
+    // Grade 7 and 6+ are kind of easter eggs. They wont be visible in grade edit menu, but teacher can type them in.
+    return [//new Grade("7", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#1bc5e3"),
+    //new Grade("6+", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#1be39a"),
+    new Grade("6", 3, 1, new Date(Date.now()), this.getSubjects()[1], "#4ae31b"),
     new Grade("6-", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#4ae31b"),
     new Grade("5+", 3, 1, new Date(Date.now()), this.getSubjects()[2], "#b1e31b"),
     new Grade("5", 3, 1, new Date(Date.now()), this.getSubjects()[6], "#b1e31b"),

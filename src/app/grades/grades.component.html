@@ -3,12 +3,12 @@
     <mat-list class="subjectList">
       <br><br>
       <div *ngFor="let subject of subjects">
-        <mat-list-item>
+        <mat-list-item role="listitem">
           <div>
-          <h2>{{subject.displayName}}</h2>
+          <h2 class="subjectName">{{subject.displayName}}</h2>
           <mat-list class="gradeList">
             <div *ngFor="let grade of grades">
-              <mat-list-item>
+              <mat-list-item role="listitem">
                 <div *ngIf="grade.value.includes('-') || grade.value.includes('+'); else normalBadge">
                   <div [ngStyle]="{'background-color':grade.color}" class="extendedBadge">{{grade.value}}</div>
                 </div>
@@ -28,6 +28,16 @@
 
   </mat-tab>
   <mat-tab label="Oceny szczegółowo">
-    
+      <div *ngFor="let subject of subjects">
+        <br>
+        <h1>&nbsp;{{subject.displayName}}</h1>
+        <div *ngFor="let grade of grades" class="gradesParent">
+          <mat-card class="gradeCard" [ngStyle]="{'background-color':grade.color}">
+            <p>Ocena: {{grade.value}}</p>
+            <p>Waga: {{grade.weight}}</p>
+            <p>Wystawiono: {{grade.createdDate.toLocaleString()}}</p></mat-card>
+            <br>
+        </div>
+      </div>
   </mat-tab>
 </mat-tab-group>

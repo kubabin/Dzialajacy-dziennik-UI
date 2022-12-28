@@ -10,12 +10,12 @@
       <div [ngSwitch]="mainMode">
         <div *ngSwitchCase="'app'">
           <mat-toolbar color="primary"><button mat-icon-button aria-label="Menu"(click)="drawer.toggle()" ><mat-icon>menu</mat-icon></button>Działający dziennik<span class="spacer"></span>
-            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"><mat-icon>person</mat-icon></button>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu"[matBadge]="modeBadge" matBadgePosition="before"><mat-icon>person</mat-icon></button>
             <mat-menu #menu="matMenu">
               <div>
-                <button mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
+                <button (click)="mainMode='app'" mat-menu-item><mat-icon>book</mat-icon>Uczeń</button>
                 <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
-                <button mat-menu-item><mat-icon>settings</mat-icon>Ustawienia</button>
+                <button (click)="mainMode='settings'" mat-menu-item [matBadge]="settingsBadge"><mat-icon>settings</mat-icon>Ustawienia</button>
               </div>
             </mat-menu>
           </mat-toolbar>
@@ -35,9 +35,19 @@
             </mat-drawer-content>
           </mat-drawer-container>
         </div>
-
-
-
+        <div *ngSwitchCase="'settings'">
+          <mat-toolbar color="primary"><button mat-icon-button (click)="mainMode='app'" ><mat-icon>arrow_back</mat-icon></button>Działający dziennik<span class="spacer"></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu" [matBadge]="modeBadge"><mat-icon>person</mat-icon></button>
+            <mat-menu #menu="matMenu">
+              <div>
+                <button mat-menu-item (click)="mainMode='app'"><mat-icon>book</mat-icon>Uczeń</button>
+                <button mat-menu-item><mat-icon>person_outline</mat-icon>Profil</button>
+                <button mat-menu-item (click)="mainMode='settings'" [matBadge]="modeBadge"><mat-icon>settings</mat-icon>Ustawienia</button>
+              </div>
+            </mat-menu>
+          </mat-toolbar>
+          <app-settings></app-settings>
+        </div>
       </div>
     </router-outlet>
   </body>

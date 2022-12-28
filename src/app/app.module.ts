@@ -28,6 +28,7 @@ import { TestsComponent } from './tests/tests.component';
 import { PlanComponent } from './plan/plan.component';
 import { StudentDrawerComponent } from './student-drawer/student-drawer.component';
 import { TeacherDrawerComponent } from './teacher-drawer/teacher-drawer.component';
+import { SettingsComponent } from './settings/settings.component';
 import { RouterModule } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
@@ -46,7 +47,8 @@ if (environment.production)
     PlanComponent,
     StudentDrawerComponent,
     TeacherDrawerComponent,
-    AttendanceComponent
+    AttendanceComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
