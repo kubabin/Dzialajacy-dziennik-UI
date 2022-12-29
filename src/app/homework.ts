@@ -25,4 +25,5 @@ export class Homework {
   getJson(){
     return {"content":this.content, "createdBy":this.createdBy, "createdDate":this.createdDate, "completeBy": this.completeBy}
   }
+
 }

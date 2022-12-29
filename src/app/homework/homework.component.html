@@ -1,1 +1,11 @@
-<p>homework works!</p>
+<div class="mainIterationDiv" *ngFor="let subject of subjects">
+  <h1>{{subject.displayName}}</h1>
+  <div *ngFor="let hw of filterBySubject(api.getHomework(), subject)">
+    &nbsp;<mat-card class="homeworkCard">
+      <mat-card-header>{{hw.createdBy}}</mat-card-header>
+      <mat-card-content>{{hw.content}}</mat-card-content>
+      <mat-card-footer>&nbsp;&nbsp;Zrobić do:{{hw.completeBy.toLocaleString()}}</mat-card-footer>
+    </mat-card>
+    <br>
+  </div>
+</div>

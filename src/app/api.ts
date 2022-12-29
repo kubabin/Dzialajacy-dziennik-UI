@@ -1,5 +1,6 @@
 import { Cookies } from "./cookies";
 import { Grade } from "./grade";
+import { Homework } from "./homework";
 import { Subject } from "./subject";
 
 
@@ -61,5 +62,30 @@ export class Api {
     new Subject("name name", 8, "Muzyka"),
     new Subject("name name", 9, "Wychowanie Fizyczne"),
     new Subject("name name", 10, "Historia")]
+  }
+  getHomework()
+  {
+    return [ new Homework(undefined,"Proszę o przyniesienie zaległych prac. Na kolejną lekcje proszę przynieść patyczki, blok techniczny kolorowy, blok rysunkowy biały i wstążkę.", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[0]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[0]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[1]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[1]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[2]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[2]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[3]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[3]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[4]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[4]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[5]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[5]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[6]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[6]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[7]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[7]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[8]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[8]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[9]),
+    new Homework(undefined,"Test test", "name name", new Date(), new Date(2023, 1, 15, 11, 15), this.getSubjects()[9]),
+
+    ]
   }
 }
