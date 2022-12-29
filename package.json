@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "DevServer":"ng serve",
-    "ProdBuild":"ng build"
+    "ProdBuild":"ng build",
+    "start":"ng serve"
   },
   "private": true,
   "dependencies": {
