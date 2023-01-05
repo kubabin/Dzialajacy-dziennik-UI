@@ -1,6 +1,6 @@
 // Internals
 import { NgModule, isDevMode, enableProdMode } from '@angular/core';
-import { BrowserModule, enableDebugTools } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,7 +17,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field'
-import {MatTabsModule} from '@angular/material/tabs'
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 // Builtin components
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -65,6 +66,7 @@ if (environment.production)
     MatCardModule,
     MatFormFieldModule,
     MatTabsModule,
+    MatGridListModule,
     RouterModule,
     ServiceWorkerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {

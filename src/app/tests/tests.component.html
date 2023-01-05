@@ -1,1 +1,11 @@
-<p>tests works!</p>
+<div *ngFor="let subject of subjects">
+  <h1>{{subject.displayName}}</h1>
+  <div *ngFor="let test of filterBySubject(tests, subject)">
+    <mat-card class="testCard">
+      <mat-card-title>{{test.name}}</mat-card-title>
+      <mat-card-content>Utworzony przez: {{test.createdBy}}</mat-card-content>
+      <mat-card-footer>Odbędzie się: {{test.assignedOn.toLocaleString()}}</mat-card-footer>
+    </mat-card>
+    <br>
+  </div>
+</div>

@@ -1,1 +1,12 @@
-<p>plan works!</p>
+<mat-grid-list class="list" cols="6" rowHeight="3:1">
+  <mat-grid-tile>Nr</mat-grid-tile>
+  <mat-grid-tile>Poniedziałek</mat-grid-tile>
+  <mat-grid-tile>Wtorek</mat-grid-tile>
+  <mat-grid-tile>Środa</mat-grid-tile>
+  <mat-grid-tile>Czwartek</mat-grid-tile>
+  <mat-grid-tile>Piątek</mat-grid-tile>
+  <div *ngFor="let lesson of api.getPlan(); index as i">
+    <mat-grid-tile>{{lesson[i].lessonNo}}</mat-grid-tile>
+    
+  </div>
+</mat-grid-list>

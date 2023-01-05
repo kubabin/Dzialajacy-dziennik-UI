@@ -1,0 +1,9 @@
+mat-grid-tile
+{
+  border-right: solid black;
+  border-left: solid black;
+}
+mat-grid-list
+{
+  width: 87vw;
+}

@@ -15,7 +15,7 @@ function bootstrap() {
     registrationStrategy: 'registerWhenStable:30000'
     // registrationStrategy: 'registerImmediately'
   }),
-  console.log("service worker registered!")
+  //console.log("service worker registered!")
   platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 };
