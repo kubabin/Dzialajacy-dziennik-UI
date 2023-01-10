@@ -8,9 +8,13 @@ import { DayOfWeek } from '../day-of-week';
   templateUrl: './plan.component.html',
   styleUrls: ['./plan.component.css']
 })
+
 export class PlanComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+
+  }
   api:Api=new Api("","")
   daysOfWeek:string[] = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek"]
   ngOnInit(): void {

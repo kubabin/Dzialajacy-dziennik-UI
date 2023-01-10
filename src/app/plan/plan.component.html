@@ -1,4 +1,4 @@
-<mat-grid-list class="list" cols="6" rowHeight="3:1">
+<mat-grid-list class="list" cols="6" rowHeight="40px">
   <mat-grid-tile>Nr</mat-grid-tile>
   <mat-grid-tile>Poniedziałek</mat-grid-tile>
   <mat-grid-tile>Wtorek</mat-grid-tile>
@@ -6,7 +6,12 @@
   <mat-grid-tile>Czwartek</mat-grid-tile>
   <mat-grid-tile>Piątek</mat-grid-tile>
   <div *ngFor="let lesson of api.getPlan(); index as i">
-    <mat-grid-tile>{{lesson[i].lessonNo}}</mat-grid-tile>
-    
+    <mat-grid-tile>{{i}}</mat-grid-tile>
+    <div *ngFor="let lessson of api.getPlan()[i]">
+      <mat-grid-tile>
+        <button mat-button matTooltipPosition="below">{{lessson.subject.displayName}}</button>
+      </mat-grid-tile>
+    </div>
   </div>
 </mat-grid-list>
+

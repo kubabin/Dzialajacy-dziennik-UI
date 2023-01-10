@@ -111,22 +111,72 @@ export class Api {
   }
   getPlan()
   {
-    // each [] must contain 5 entries, corresponding to week days. they can be empty.
+    // each [] must contain 5 entries, corresponding to week days.
     // each [] represents a lesson number.
-    var returnedArray:PlanLesson[][] = [[new PlanLesson(0, this.getSubjects()[0], DayOfWeek.Monday),
-    PlanLesson.empty(0, DayOfWeek.Tuesday),
-    PlanLesson.empty(0, DayOfWeek.Wednesday),
-    PlanLesson.empty(0, DayOfWeek.Thursday),
-    PlanLesson.empty(0, DayOfWeek.friday)], // Język polski
-    [new PlanLesson(1, this.getSubjects()[1], DayOfWeek.Monday)],
-    [new PlanLesson(2, this.getSubjects()[2], DayOfWeek.Tuesday)], // Matma
-    [new PlanLesson(3, this.getSubjects()[3], DayOfWeek.Tuesday)], // Geografia
-    [new PlanLesson(4, this.getSubjects()[4], DayOfWeek.Wednesday)], // Biologia
-    [new PlanLesson(5, this.getSubjects()[5], DayOfWeek.Wednesday)], // Religia
-    [new PlanLesson(6, this.getSubjects()[6], DayOfWeek.Thursday)], // Plastyka
-    [new PlanLesson(7, this.getSubjects()[7], DayOfWeek.Thursday)], // Muzyka
-    [new PlanLesson(8, this.getSubjects()[8], DayOfWeek.friday)], // Wychowanie fizyczne
-    [new PlanLesson(9, this.getSubjects()[9], DayOfWeek.friday)], // historia
+    var returnedArray:PlanLesson[][] = [[new PlanLesson(0, this.getSubjects()[0], DayOfWeek.Monday), // Język polski
+      PlanLesson.empty(0, DayOfWeek.Tuesday),
+      PlanLesson.empty(0, DayOfWeek.Wednesday),
+      PlanLesson.empty(0, DayOfWeek.Thursday),
+      PlanLesson.empty(0, DayOfWeek.friday)],
+
+    [new PlanLesson(1, this.getSubjects()[1], DayOfWeek.Monday),
+      PlanLesson.empty(1, DayOfWeek.Tuesday),
+      PlanLesson.empty(1, DayOfWeek.Wednesday),
+      PlanLesson.empty(1, DayOfWeek.Thursday),
+      PlanLesson.empty(1, DayOfWeek.friday)
+    ],
+
+    [PlanLesson.empty(2, DayOfWeek.Monday),
+      new PlanLesson(2, this.getSubjects()[2], DayOfWeek.Tuesday), // Matematyka
+      PlanLesson.empty(2, DayOfWeek.Wednesday),
+      PlanLesson.empty(2,DayOfWeek.Thursday),
+      PlanLesson.empty(2, DayOfWeek.friday)],
+
+    [PlanLesson.empty(3, DayOfWeek.Monday),
+      new PlanLesson(3, this.getSubjects()[3], DayOfWeek.Tuesday),// Geografia
+      PlanLesson.empty(3, DayOfWeek.Wednesday),
+      PlanLesson.empty(3, DayOfWeek.Thursday),
+      PlanLesson.empty(3,DayOfWeek.friday)],
+
+    [PlanLesson.empty(4, DayOfWeek.Monday),
+      PlanLesson.empty(4, DayOfWeek.Tuesday),
+      new PlanLesson(4, this.getSubjects()[4], DayOfWeek.Wednesday),// Biologia
+    PlanLesson.empty(4, DayOfWeek.Thursday),
+    PlanLesson.empty(4,DayOfWeek.friday)],
+
+    [
+      PlanLesson.empty(5, DayOfWeek.Monday),
+      PlanLesson.empty(5, DayOfWeek.Tuesday),
+      new PlanLesson(5, this.getSubjects()[5], DayOfWeek.Wednesday),// Religia
+      PlanLesson.empty(5, DayOfWeek.Thursday),
+      PlanLesson.empty(5,DayOfWeek.friday)],
+
+    [
+      PlanLesson.empty(6, DayOfWeek.Monday),
+      PlanLesson.empty(6, DayOfWeek.Tuesday),
+      PlanLesson.empty(6, DayOfWeek.Wednesday),
+      new PlanLesson(6, this.getSubjects()[6], DayOfWeek.Thursday),// Plastyka
+      PlanLesson.empty(6,DayOfWeek.friday)],
+
+    [PlanLesson.empty(7, DayOfWeek.Monday),
+      PlanLesson.empty(7, DayOfWeek.Tuesday),
+      PlanLesson.empty(7, DayOfWeek.Wednesday),
+      new PlanLesson(7, this.getSubjects()[7], DayOfWeek.Thursday), // Muzyka
+      PlanLesson.empty(7, DayOfWeek.friday)],
+
+    [
+      PlanLesson.empty(8, DayOfWeek.Monday),
+      PlanLesson.empty(8, DayOfWeek.Tuesday),
+      PlanLesson.empty(8, DayOfWeek.Wednesday),
+      PlanLesson.empty(8, DayOfWeek.Thursday),
+      new PlanLesson(8, this.getSubjects()[8], DayOfWeek.friday), // Wychowanie fizyczne
+      ],
+
+    [PlanLesson.empty(9, DayOfWeek.Monday),
+      PlanLesson.empty(9, DayOfWeek.Tuesday),
+      PlanLesson.empty(9, DayOfWeek.Wednesday),
+      PlanLesson.empty(9, DayOfWeek.Thursday),
+      new PlanLesson(9, this.getSubjects()[9], DayOfWeek.friday)], // Historia
   ]
     return returnedArray;
   }
